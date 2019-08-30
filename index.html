@@ -1,17 +1,790 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style type="text/css">
-        h1{
-            text-align: center;
-            font-size: 50px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Hello Github</h1>   
-</body>
-</html>
+<!DOCTYPE html><html><head>
+      <title>index</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\pzhang\.vscode-insiders\extensions\shd101wyy.markdown-preview-enhanced-0.4.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
 
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="tv">TV</h1>
+
+<ol>
+<li>&#x6570;&#x5B57;&#x7535;&#x89C6;&#x6807;&#x51C6;</li>
+</ol>
+<ul>
+<li>DVB</li>
+<li>ATSC</li>
+<li>ISDB (&#x65E5;&#x672C;)</li>
+<li>SBTVD (&#x5DF4;&#x897F;)</li>
+<li>DTMB (&#x4E2D;&#x56FD;)</li>
+</ul>
+<p>&#x5206;&#x5E03;&#xFF1A;<br>
+<img src="./assets/Digital_Terrestrial_TV_Standards.png" alt="&#x6570;&#x5B57;TV&#x5206;&#x5E03;"></p>
+<ol start="2">
+<li>&#x6A21;&#x62DF;&#x7535;&#x89C6;&#x6807;&#x51C6;</li>
+</ol>
+<ul>
+<li>NTSC</li>
+<li>PAL</li>
+<li>SCAM</li>
+</ul>
+<p>&#x5206;&#x5E03;&#xFF1A;<br>
+<img src="./assets/TV_Color_System.png" alt="&#x6A21;&#x62DF;TV&#x5206;&#x5E03;"></p>
+<h2 class="mume-header" id="fe-%E5%89%8D%E7%AB%AF">FE (&#x524D;&#x7AEF;)</h2>
+
+<p>Tuner&#x548C;Demodulator&#x5171;&#x540C;&#x7EC4;&#x6210;TV&#x524D;&#x7AEF;(Frontend)&#x3002;Tuner&#x662F;&#x8C03;&#x8C10;&#x5668;&#xFF0C;&#x9501;&#x5B9A;&#x4E00;&#x4E2A;&#x9891;&#x7387;&#x7684;&#x9891;&#x70B9;&#x3002;Demod&#x662F;&#x89E3;&#x8C03;&#x5668;&#xFF0C;&#x5C06;&#x8BE5;&#x9891;&#x7387;&#x4E0A;&#x7684;&#x7801;&#x6D41;&#x89E3;&#x51FA;&#x6807;&#x51C6;&#x6D41;&#x3002;</p>
+<h3 class="mume-header" id="tuner">Tuner</h3>
+
+<h4 class="mume-header" id="tuner-%E4%BD%9C%E7%94%A8">Tuner &#x4F5C;&#x7528;</h4>
+
+<p>Tuner&#x9AD8;&#x9891;&#x5934;&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x8C03;&#x9891;&#x5668;&#xFF0C;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x6709;&#xFF1A;</p>
+<ul>
+<li>1.&#x9009;&#x62E9;&#x9891;&#x9053;&#x5373;&#x9009;&#x53F0;&#xFF0C;&#x5728;&#x786C;&#x4EF6;&#x4E0A;&#x5C31;&#x662F;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668;&#xFF0C;&#x9009;&#x62E9;&#x51FA;&#x6307;&#x5B9A;&#x9891;&#x7387;&#x7684;&#x4FE1;&#x53F7;</li>
+<li>2.&#x653E;&#x5927;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x662F;&#x4E2A;&#x4FE1;&#x53F7;&#x653E;&#x5927;&#x5668;</li>
+<li>3.&#x53D8;&#x9891;&#x529F;&#x80FD;&#xFF0C;&#x5C06;&#x9009;&#x5B9A;&#x9891;&#x7387;&#x7684;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x4E3A;&#x4E2D;&#x9891;&#x4FE1;&#x53F7;&#xFF0C;&#x4EE5;&#x4F9B;&#x540E;&#x7EED;demodulator&#x4F7F;&#x7528;,&#x8FD9;&#x91CC;&#x9762;&#x6709;&#x4E2A;AGC&#x5668;&#x4EF6;(&#x539F;&#x7406;&#x4E0A;&#x5C31;&#x662F;&#x7A33;&#x5B9A;&#x4FE1;&#x53F7;&#x7684;&#x6240;&#x7528;)</li>
+</ul>
+<p>&#x4E2D;&#x9891;&#x4FE1;&#x53F7;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5236;&#x5F0F;</th>
+<th>&#x56FE;&#x50CF;&#x4E2D;&#x9891;</th>
+<th>&#x4F34;&#x97F3;&#x4E2D;&#x9891;</th>
+<th>&#x7B2C;&#x4E8C;&#x4F34;&#x97F3;&#x4E2D;&#x9891;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTSC-M</td>
+<td>45.75</td>
+<td>41.25</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>PAL-M</td>
+<td>45.75</td>
+<td>41.25</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>PAL-B/G/H</td>
+<td>38.9</td>
+<td>33.4</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>PAL-I</td>
+<td>39.5</td>
+<td>33.5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>PAL-D/K</td>
+<td>38</td>
+<td>31.5</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>PAL-N</td>
+<td>45.75</td>
+<td>41.25</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>SECAM-B/G/H</td>
+<td>38.9</td>
+<td>33.4</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>SECAM-D/K</td>
+<td>38</td>
+<td>31.5</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>SECAM-L</td>
+<td>VHF:28.05<br> UHF:39.2</td>
+<td>VHF:38.2<br> UHF:32.7</td>
+<td>VHF:10.15<br> UHF:6.5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x536B;&#x661F;&#x7535;&#x89C6;&#x6240;&#x4F7F;&#x7528;&#x7684;LNB Tuner, &#x53D8;&#x9891;&#x8F93;&#x51FA;&#x57FA;&#x5E26;&#x4FE1;&#x53F7;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E2D;&#x9891;&#x4FE1;&#x53F7;&#x3002;</p>
+</blockquote>
+<h4 class="mume-header" id="tuner-%E7%BB%93%E6%9E%84">Tuner &#x7ED3;&#x6784;</h4>
+
+<p><img src="./assets/Tuner.png" alt="Tuner&#x6846;&#x56FE;"></p>
+<blockquote>
+<p>IF&#x8F93;&#x51FA;&#x4E3A;&#x5DEE;&#x5206;&#x4FE1;&#x53F7;(&#x4E24;&#x8DEF;&#x5E45;&#x5EA6;&#x76F8;&#x540C;&#xFF0C;&#x76F8;&#x4F4D;&#x76F8;&#x53CD;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x503C;&#x4E3A;P-N)&#xFF0C;</p>
+</blockquote>
+<p>&#x4EE5;&#x4E0A;&#x6846;&#x56FE;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x7535;&#x8DEF;&#x529F;&#x80FD;&#x5757;&#xFF1A;</p>
+<ul>
+<li>
+<p>1.&#x8F93;&#x5165;&#x6EE4;&#x6CE2;(&#x4E5F;&#x53EF;&#x80FD;&#x5728;&#x5916;&#x90E8;&#x81EA;&#x884C;&#x6DFB;&#x52A0;)<br>
+&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x7684;&#x4E3A;&#x5C04;&#x9891;&#x4FE1;&#x53F7;&#xFF0C;&#x4F46;&#x540C;&#x65F6;&#x4E5F;&#x4F1A;&#x5305;&#x542B;&#x9AD8;&#x9891;&#x7684;/&#x4F4E;&#x9891;&#x7684;&#x4E00;&#x4E9B;&#x5E72;&#x6270;&#x4FE1;&#x53F7;&#xFF0C;&#x4E3A;&#x4E86;&#x53BB;&#x6389;&#xFF08;&#x8870;&#x51CF;&#xFF09;&#x8FD9;&#x4E9B;&#x5E72;&#x6270;&#x4FE1;&#x53F7;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5E26;&#x901A;&#x6EE4;&#x6CE2;&#x5668;&#x6765;&#x9009;&#x62E9;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x8870;&#x51CF;&#x5E72;&#x6270;&#x4FE1;&#x53F7;&#xFF1B;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x6EE4;&#x6CE2;&#x5668;&#x8BBE;&#x8BA1;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x8F93;&#x5165;&#x7684;S11&#x53C2;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x52A0;&#x5165;S11&#x53C2;&#x6570;&#x8C03;&#x6574;&#x7F51;&#x7EDC;&#x3002;</p>
+</li>
+<li>
+<p>2.LNA<br>
+LNA&#x5373;&#x4F4E;&#x566A;&#x58F0;&#x653E;&#x5927;&#x5668;&#xFF0C;&#x662F;&#x566A;&#x58F0;&#x7CFB;&#x6570;&#x5F88;&#x4F4E;&#x7684;&#x653E;&#x5927;&#x5668;&#x3002;&#x4E00;&#x822C;&#x7528;&#x4F5C;&#x5404;&#x7C7B;&#x65E0;&#x7EBF;&#x7535;&#x63A5;&#x6536;&#x673A;&#x7684;&#x9AD8;&#x9891;&#x6216;&#x4E2D;&#x9891;&#x524D;&#x7F6E;&#x653E;&#x5927;&#x5668;&#x4EE5;&#x53CA;&#x9AD8;&#x7075;&#x654F;&#x5EA6;&#x7535;&#x5B50;&#x63A2;&#x6D4B;&#x8BBE;&#x5907;&#x7684;&#x653E;&#x5927;&#x7535;&#x8DEF;&#x3002;<br>
+&#x5728;&#x653E;&#x5927;&#x5FAE;&#x5F31;&#x4FE1;&#x53F7;&#x7684;&#x573A;&#x5408;&#xFF0C;&#x653E;&#x5927;&#x5668;&#x81EA;&#x8EAB;&#x7684;&#x566A;&#x58F0;&#x5BF9;&#x4FE1;&#x53F7;&#x7684;&#x5E72;&#x6270;&#x53EF;&#x80FD;&#x5F88;&#x4E25;&#x91CD;&#xFF0C;&#x56E0;&#x6B64;&#x5E0C;&#x671B;&#x51CF;&#x5C0F;&#x8FD9;&#x79CD;&#x566A;&#x58F0;&#x3002;&#x7531;&#x653E;&#x5927;&#x5668;&#x6240;&#x5F15;&#x8D77;&#x7684;&#x4FE1;&#x566A;&#x6BD4;&#x6076;&#x5316;&#x7A0B;&#x5EA6;&#x901A;&#x5E38;&#x7528;&#x566A;&#x58F0;&#x7CFB;&#x6570; F&#x6765;&#x8868;&#x793A;&#x3002;&#x7406;&#x60F3;&#x653E;&#x5927;&#x5668;&#x7684;&#x566A;&#x58F0;&#x7CFB;&#x6570; F=1&#xFF08;0&#x5206;&#x8D1D;&#xFF09;&#xFF0C;&#x5176;&#x7269;&#x7406;&#x4E0A;&#x7684;&#x610F;&#x4E49;&#x662F;&#x8F93;&#x51FA;&#x4FE1;&#x566A;&#x6BD4;&#x7B49;&#x4E8E;&#x8F93;&#x5165;&#x4FE1;&#x566A;&#x6BD4;&#x3002;</p>
+</li>
+<li>
+<p>3.AGC<br>
+&#x81EA;&#x52A8;&#x589E;&#x76CA;&#x63A7;&#x5236;(automatic gain control)&#x4F7F;&#x653E;&#x5927;&#x7535;&#x8DEF;&#x7684;&#x589E;&#x76CA;&#x81EA;&#x52A8;&#x5730;&#x968F;&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;&#x800C;&#x8C03;&#x6574;&#x7684;&#x81EA;&#x52A8;&#x63A7;&#x5236;&#x65B9;&#x6CD5;&#x3002;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x5C31;&#x662F;&#x4FDD;&#x6301;&#x4E00;&#x5B9A;&#x589E;&#x76CA;&#xFF0C;&#x5F53;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x5E45;&#x5EA6;&#x51CF;&#x5C0F;&#xFF0C;&#x653E;&#x5927;&#x7535;&#x8DEF;&#x589E;&#x76CA;&#x53D8;&#x5927;&#xFF1B;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x5E45;&#x5EA6;&#x53D8;&#x5927;&#xFF0C;&#x653E;&#x5927;&#x7535;&#x8DEF;&#x589E;&#x76CA;&#x51CF;&#x5C0F;&#x3002;<br>
+&#x81EA;&#x52A8;&#x589E;&#x76CA;&#x63A7;&#x5236;&#x662F;&#x9650;&#x5E45;&#x8F93;&#x51FA;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x5B83;&#x5229;&#x7528;&#x7EBF;&#x6027;&#x653E;&#x5927;&#x548C;&#x538B;&#x7F29;&#x653E;&#x5927;&#x7684;&#x6709;&#x6548;&#x7EC4;&#x5408;&#x5BF9;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x8FDB;&#x884C;&#x8C03;&#x6574;&#x3002;&#x5F53;&#x5F31;&#x4FE1;&#x53F7;&#x8F93;&#x5165;&#x65F6;&#xFF0C;&#x7EBF;&#x6027;&#x653E;&#x5927;&#x7535;&#x8DEF;&#x5DE5;&#x4F5C;&#xFF0C;&#x4FDD;&#x8BC1;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x5F3A;&#x5EA6;&#xFF1B;&#x5F53;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x5F3A;&#x5EA6;&#x65F6;&#xFF0C;&#x542F;&#x52A8;&#x538B;&#x7F29;&#x653E;&#x5927;&#x7535;&#x8DEF;&#xFF0C;&#x4F7F;&#x8F93;&#x51FA;&#x5E45;&#x5EA6;&#x964D;&#x4F4E;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;AGC&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x538B;&#x7F29;&#x6BD4;&#x4F8B;&#x81EA;&#x52A8;&#x63A7;&#x5236;&#x589E;&#x76CA;&#x7684;&#x5E45;&#x5EA6;&#x3002;<br>
+&#x53CC;&#x8DEF;AGC&#xFF1A;<br>
+&#x5BF9;&#x4E8E;&#x53CC;&#x73AF;&#x8DEF;AGC&#xFF0C;&#x4E00;&#x8DEF;&#x7ECF;&#x8FC7;&#x6EE4;&#x6CE2;&#x7684;&#x89E3;&#x8C03;&#x5668;PWM&#x8F93;&#x51FA;&#x7528;&#x4E8E;&#x63A7;&#x5236;BB_AGC&#xFF0C;&#x7B2C;&#x4E8C;&#x8DEF;PWM&#x8F93;&#x51FA;&#x63A7;&#x5236;RF_AGC&#x3002;&#x5BF9;&#x4E8E;&#x5355;&#x73AF;&#x8DEF;AGC&#xFF0C;&#x5229;&#x7528;&#x4E00;&#x8DEF;&#x7ECF;&#x8FC7;&#x6EE4;&#x6CE2;&#x7684;&#x89E3;&#x8C03;&#x5668;PWM&#x8F93;&#x51FA;&#x63A7;&#x5236;BB_AGC&#xFF1B;&#x7ED3;&#x5408;BB_AGC&#xFF0C;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;PNP&#x6676;&#x4F53;&#x7BA1;&#x7535;&#x8DEF;&#x63A7;&#x5236;RF_AGC&#x3002;&#x8BBE;&#x8BA1;&#x7075;&#x6D3B;&#x7684;&#x53CC;&#x73AF;&#x8DEF;AGC&#x5728;&#x5F3A;&#x4FE1;&#x53F7;&#x6761;&#x4EF6;&#x4E0B;&#x80FD;&#x591F;&#x63D0;&#x4F9B;&#x66F4;&#x7406;&#x60F3;&#x7684;RF_AGC&#x7535;&#x538B;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5B83;&#x5728;&#x5927;&#x4FE1;&#x53F7;&#x6761;&#x4EF6;&#x4E0B;&#x6027;&#x80FD;&#x66F4;&#x597D;&#x3002;</p>
+</li>
+<li>
+<p>4.&#x8C10;&#x6CE2;&#x6EE4;&#x6CE2;&#x5668;<br>
+&#x5BF9;&#x4E8E;&#x9AD8;&#x9891;&#x4FE1;&#x53F7;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x5E0C;&#x671B;&#x5176;&#x672C;&#x8EAB;&#x7684;&#x4FE1;&#x53F7;&#x88AB;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x9891;&#x57DF;&#x6765;&#x770B;&#xFF0C;&#x5176;&#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x5176;&#x500D;&#x9891;&#x8C10;&#x6CE2;&#x5B58;&#x5728;&#xFF0C;&#x8FD9;&#x4E9B;&#x4FE1;&#x53F7;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6EE4;&#x9664;&#x6389;&#x5B83;&#x3002;</p>
+</li>
+<li>
+<p>5.&#x6DF7;&#x9891;&#x5668;<br>
+&#x6DF7;&#x9891;&#x5668;&#x4F4D;&#x4E8E;&#x4F4E;&#x566A;&#x58F0;&#x653E;&#x5927;&#x5668;(LNA)&#x4E4B;&#x540E; , &#x76F4;&#x63A5;&#x5904;&#x7406;LNA&#x653E;&#x5927;&#x540E;&#x7684;&#x5C04;&#x9891;&#x4FE1;&#x53F7;&#x3002;&#x4E3A;&#x5B9E;&#x73B0;&#x6DF7;&#x9891;&#x529F;&#x80FD;, &#x6DF7;&#x9891;&#x5668;&#x8FD8;&#x9700;&#x8981;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x538B;&#x63A7;&#x632F;&#x8361;&#x5668;&#x7684;&#x672C;&#x632F;(LO)&#x4FE1;&#x53F7; ,&#x5176;&#x7535;&#x8DEF;&#x5B8C;&#x5168;&#x5DE5;&#x4F5C;&#x5728;&#x5C04;&#x9891;&#x9891;&#x6BB5;&#x3002;&#x538B;&#x63A7;&#x632F;&#x8361;&#x5668;&#x4EA7;&#x751F;&#x7684;&#x9891;&#x7387;&#x7531;&#x9501;&#x76F8;&#x73AF;&#x3001;&#x500D;&#x9891;&#x5668;&#x7B49;&#x63A7;&#x5236;&#x3002;</p>
+</li>
+<li>
+<p>6.IF&#x4E2D;&#x9891;&#x653E;&#x5927;&#x5668;&#x548C;&#x6EE4;&#x6CE2;&#x5668;<br>
+&#x7531;&#x6DF7;&#x9891;&#x5668;&#x4E4B;&#x540E;&#x4EA7;&#x751F;&#x7684;&#x4E2D;&#x9891;&#x4FE1;&#x53F7;&#xFF0C;&#x56E0;&#x4E3A;&#x4E2D;&#x9891;&#x4FE1;&#x53F7;&#x5177;&#x6709;&#x5F88;&#x597D;&#x7684;&#x589E;&#x76CA;&#x548C;&#x9891;&#x5E26;&#x7279;&#x6027;&#x3002;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x4F17;&#x591A;&#x9891;&#x7387;&#x7684;&#x5E72;&#x6270;&#x4FE1;&#x53F7;&#xFF0C;&#x6211;&#x4EEC;&#x4EC5;&#x4EC5;&#x9700;&#x8981;&#x6709;&#x7528;&#x7684;&#x4E2D;&#x9891;&#x4FE1;&#x53F7;&#xFF0C;&#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E2D;&#x9891;&#x6EE4;&#x6CE2;&#x5668;&#x5B8C;&#x6210;&#x9009;&#x9891;&#x3002;</p>
+</li>
+<li>
+<p>7.IQ&#x4FE1;&#x53F7;<br>
+&#x6DF7;&#x9891;&#x540E;&#x7684;IF&#x7684;&#x4FE1;&#x53F7;&#x4E3A;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6297;&#x5E72;&#x6270;&#x9700;&#x6C42;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x8FDB;&#x884C;&#x76F8;&#x5173;&#x7684;&#x8C03;&#x5236;&#xFF0C;&#x6BD4;&#x5982;QAM64&#x7B49;(QAM&#x65B9;&#x5F0F;&#x8D8A;&#x5927;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x540C;&#x6837;&#x7B26;&#x53F7;&#x7387;&#x7684;&#x7801;&#x6D41;&#x7801;&#x7387;&#x5C31;&#x9AD8;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x4F4D;&#x6570;&#x5C31;&#x5927;&#xFF0C;&#x4F46;&#x662F;&#x6297;&#x5E72;&#x6270;&#x6027;&#x53D8;&#x5DEE;)&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x65F6;&#x5DF2;&#x7ECF;&#x5C06;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x4E3A;I&#x3001;Q&#x4FE1;&#x53F7;&#xFF0C;&#x5373;&#x5C31;&#x662F;&#x4E24;&#x8005;&#x76F8;&#x4F4D;&#x76F8;&#x5DEE;90&#x5EA6;&#x3002;</p>
+</li>
+<li>
+<p>8.IQ&#x9A71;&#x52A8;&#x8F93;&#x51FA;<br>
+IF&#x4FE1;&#x53F7;&#x8F93;&#x51FA;&#x65F6;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x8F93;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;AD&#x8F6C;&#x6362;&#x5668;&#x6765;&#x5B8C;&#x6210;&#xFF0C;&#x8F93;&#x51FA;&#x8BBE;&#x7F6E;&#x4E3A;TTL&#x3001;CMOS&#x7B49;&#x7535;&#x5E73;&#x6765;&#x5229;&#x4E8E;&#x548C;Demo&#x7B49;&#x6570;&#x5B57;&#x5668;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;&#x3002;</p>
+</li>
+<li>
+<p>9.&#x4E3B;&#x63A7;&#x5236;&#x90E8;&#x5206;<br>
+&#x4E3B;&#x63A7;&#x90E8;&#x5206;&#x5305;&#x542B;IIC&#x63A7;&#x5236;&#x3001;&#x6E29;&#x5EA6;&#x68C0;&#x6D4B;&#x3001;&#x7535;&#x6E90;&#x63A7;&#x5236;&#x3001;&#x901A;&#x7528;&#x8F93;&#x51FA;&#x7B49;&#x3002;&#x4E5F;&#x5305;&#x542B;&#x4E00;&#x4E9B;&#x504F;&#x7F6E;&#x63A7;&#x5236;&#x7B49;&#x3002;</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://blog.csdn.net/LUOHUATINGYUSHENG/article/details/90609653">https://blog.csdn.net/LUOHUATINGYUSHENG/article/details/90609653</a><br>
+<a href="https://blog.csdn.net/haima1998/article/details/17324233">https://blog.csdn.net/haima1998/article/details/17324233</a></p>
+</blockquote>
+<h4 class="mume-header" id="tuner-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">Tuner &#x76F8;&#x5173;&#x6982;&#x5FF5;</h4>
+
+<ul>
+<li>
+<p><strong>Band Width (&#x5C04;&#x9891;&#x5E26;&#x5BBD;)</strong><br>
+RF&#x8F93;&#x51FA;&#x9891;&#x5E26;&#xFF0C;&#x5373;&#x6BCF;&#x79D2;&#x4F20;&#x9001;&#x7684;&#x4FE1;&#x53F7;&#x5468;&#x671F;&#x6570;&#xFF0C;&#x5E38;&#x7528;6MHz&#x3001;7MHz&#x3001;8MHz&#x3002;</p>
+</li>
+<li>
+<p><strong>Symbol Rate (SR, &#x7B26;&#x53F7;&#x7387;)</strong><br>
+&#x6307;&#x5C06;&#x6570;&#x636E;&#x4FE1;&#x53F7;&#x8FDB;&#x884C;&#x6A21;&#x62DF;&#x8F7D;&#x6CE2;&#x8C03;&#x5236;&#x540E;&#xFF0C;&#x8F7D;&#x6CE2;&#x6BCF;1&#x79D2;&#x949F;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x5468;&#x671F;&#x6027;&#x53D8;&#x5316;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x53C8;&#x79F0;&#x4E3A;&#x8C03;&#x5236;&#x901F;&#x7387;,&#x6216;&#x8005;&#x6CE2;&#x7279;&#x7387;&#x3002;<br>
+DTMB: 6875(6.875M)/6900(6.900M)</p>
+</li>
+<li>
+<p><strong>SNR</strong><br>
+Signal to Noise Ratio, &#x4FE1;&#x566A;&#x6BD4;</p>
+</li>
+<li>
+<p><strong>BER</strong><br>
+Bit Error Ratio, &#x8BEF;&#x7801;&#x7387;</p>
+</li>
+<li>
+<p><strong>SQI</strong><br>
+Signal Quality Indicator, &#x4FE1;&#x53F7;&#x8D28;&#x91CF;&#x6307;&#x6570;</p>
+</li>
+<li>
+<p><strong>SSI</strong><br>
+Signal Strength Indicator, &#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;&#x6307;&#x6570;</p>
+</li>
+<li>
+<p><strong>RSSI</strong><br>
+Received Signal Strength Indicator, &#x63A5;&#x53D7;&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;&#x6307;&#x6570;</p>
+</li>
+<li>
+<p><strong>LNB</strong><br>
+LNB&#x9AD8;&#x9891;&#x5934;(Low Noise Block)&#xFF0C;&#x5373;&#x4F4E;&#x566A;&#x58F0;&#x4E0B;&#x53D8;&#x9891;&#x5668;, &#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x964D;&#x9891;&#x3002; LNB &#x5728;&#x63A5;&#x6536;&#x536B;&#x661F;&#x4FE1;&#x53F7;&#x540E;, &#x4F1A;&#x5148;&#x5BF9;&#x536B;&#x661F;&#x4FE1;&#x53F7;&#x8FDB;&#x884C;&#x7F29;&#x653E;, &#x7136;&#x540E;&#x5728;&#x8FDB;&#x884C;&#x653E;&#x5927;, &#x4EE5;&#x6B64;&#x5B9E;&#x73B0;&#x4F4E;&#x566A;&#x58F0;&#x4FE1;&#x53F7;&#x7684;&#x8FC7;&#x6EE4;; &#x53E6;&#x5916; LNB &#x5185;&#x90E8;&#x4F1A;&#x81EA;&#x52A8;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x9AD8;&#x9891;&#x7387;&#x7684;&#x632F;&#x52A8;&#x7535;&#x5E73;, &#x6210;&#x4E3A;&#x672C;&#x632F;, &#x5F85;&#x63A5;&#x6536;&#x5230;&#x536B;&#x661F;&#x4FE1;&#x53F7;&#x540E;, &#x8BE5;&#x632F;&#x52A8;&#x4FE1;&#x53F7;&#x4F1A;&#x4E0E;&#x536B;&#x661F;&#x4FE1;&#x53F7;&#x8FDB;&#x884C;&#x53E0;&#x52A0;, &#x7C7B;&#x4F3C;&#x76F8;&#x5BF9;&#x8FD0;&#x52A8;, &#x53E0;&#x52A0;&#x540E;&#x7684;&#x4FE1;&#x53F7;&#x9891;&#x7387;&#x5373;&#x4E24;&#x8005;&#x7684;&#x76F8;&#x5BF9;&#x9891;&#x7387;, &#x4EE5;&#x6B64;&#x8FBE;&#x5230;&#x964D;&#x9891;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+</li>
+</ul>
+<h3 class="mume-header" id="demodulator">Demodulator</h3>
+
+<blockquote>
+<p>&#x8C03;&#x5236;: &#x5C06;&#x5404;&#x79CD;&#x6570;&#x5B57;&#x57FA;&#x5E26;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x6210;&#x9002;&#x4E8E;&#x4FE1;&#x9053;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x5B57;&#x8C03;&#x5236;&#x4FE1;&#x53F7;(&#x5DF2;&#x8C03;&#x4FE1;&#x53F7;&#x6216;&#x9891;&#x5E26;&#x4FE1;&#x53F7;)<br>
+&#x89E3;&#x8C03;: &#x5728;&#x63A5;&#x6536;&#x7AEF;&#x5C06;&#x6536;&#x5230;&#x7684;&#x6570;&#x5B57;&#x9891;&#x5E26;&#x4FE1;&#x53F7;&#x8FD8;&#x539F;&#x6210;&#x6570;&#x5B57;&#x57FA;&#x5E26;&#x4FE1;&#x53F7;</p>
+</blockquote>
+<h4 class="mume-header" id="demod-%E4%BD%9C%E7%94%A8">Demod &#x4F5C;&#x7528;</h4>
+
+<p>Demodulator &#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x5C06;Tuner&#x8F93;&#x51FA;&#x7684;IF&#x4E2D;&#x9891;&#x4FE1;&#x53F7;(&#x4E2D;&#x89C4;&#xFF1A; &#x56FE;&#x50CF;38M&#xFF0C; &#x8272;&#x5EA6;33.57M&#xFF0C; &#x4F34;&#x97F3;21M)&#x8FDB;&#x884C;&#x89E3;&#x8C03;, &#x8F93;&#x51FA;TS&#x4FE1;&#x53F7;&#x3002;</p>
+<h4 class="mume-header" id="demod-%E7%BB%93%E6%9E%84">Demod &#x7ED3;&#x6784;</h4>
+
+<p><img src="./assets/DRXX.png" alt="Demod&#x6846;&#x56FE;"><br>
+&#x4E0A;&#x56FE;&#x4E3A;IP_DRXX&#x7684;&#x6846;&#x56FE;&#xFF0C;QAM&#x7528;&#x4E8E;&#x89E3;&#x8C03;DVB-C/ISDB-C&#x4FE1;&#x53F7;&#xFF0C;OFDM&#x7528;&#x4E8E;&#x8C03;&#x5236;DVB-T/ISDB-T&#x4FE1;&#x53F7;&#xFF0C;VSB&#x7528;&#x4E8E;&#x89E3;&#x8C03;ATSC&#x4FE1;&#x53F7;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;DRXX&#x53EF;&#x4EE5;&#x652F;&#x6301;DVB-C/ISDB-C/DVB-T/ISDB-T/ATSC/ATV&#x7B49;&#x591A;&#x79CD;&#x5236;&#x5F0F;&#x7684;&#x8C03;&#x5236;&#x3002;</p>
+<h4 class="mume-header" id="demod-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">Demod &#x76F8;&#x5173;&#x6982;&#x5FF5;</h4>
+
+<h5 class="mume-header" id="modulation-type-%E8%B0%83%E5%88%B6%E6%96%B9%E5%BC%8F">Modulation Type &#x8C03;&#x5236;&#x65B9;&#x5F0F;</h5>
+
+<h6 class="mume-header" id="iqm">IQM</h6>
+
+<p>IQM(IQ Modulator),<br>
+IQ&#x8C03;&#x5236;&#x5C31;&#x662F;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x8DEF;&#xFF0C;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x8F7D;&#x6CE2;&#x8C03;&#x5236;&#xFF0C;&#x4E24;&#x8DEF;&#x8F7D;&#x6CE2;&#x76F8;&#x4E92;&#x6B63;&#x4EA4;&#x3002; I&#xFF1A;in-phase(&#x540C;&#x76F8;), q: quadrature (&#x6B63;&#x4EA4;)&#x3002;<br>
+IQ&#x8C03;&#x5236;&#x662F;&#x77E2;&#x91CF;&#x7684;&#x65B9;&#x5411;&#x95EE;&#x9898;&#xFF0C;&#x540C;&#x76F8;&#x5C31;&#x662F;&#x77E2;&#x91CF;&#x65B9;&#x5411;&#x76F8;&#x540C;&#x7684;&#x4FE1;&#x53F7;&#xFF1B;&#x6B63;&#x4EA4;&#x5206;&#x91CF;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x4FE1;&#x53F7;&#x77E2;&#x91CF;&#x6B63;&#x4EA4;(&#x5DEE;90&#xB0;); IQ&#x4FE1;&#x53F7;&#x662F;&#x4E00;&#x8DEF;&#x662F;0&#xB0;&#x6216;180&#xB0;&#xFF0C;&#x53E6;&#x4E00;&#x8DEF;&#x662F;90&#xB0;&#x6216;270&#xB0;&#xFF0C;&#x53EB;&#x505A;I&#x8DEF;&#x548C;Q&#x8DEF;&#xFF0C;&#x5B83;&#x4EEC;&#x5C31;&#x662F;&#x4E24;&#x8DEF;&#x6B63;&#x4EA4;&#x7684;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;I&#x548C;Q&#x662F;&#x5728;&#x76F8;&#x4F4D;&#x4E0A;&#x9762;&#x6B63;&#x4EA4;&#x7684;&#xFF08;&#x4E0D;&#x76F8;&#x5E72;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E24;&#x8DEF;&#x4FE1;&#x53F7;&#x770B;&#x5F85;&#x3002;&#x6240;&#x4EE5;&#x9891;&#x8C31;&#x5229;&#x7528;&#x7387;&#x6BD4;&#x5355;&#x76F8;&#x8C03;&#x5236;&#x63D0;&#x9AD8;&#x4E00;&#x500D;&#x3002;&#x4F46;&#x662F;IQ&#x5BF9;&#x89E3;&#x8C03;&#x8981;&#x6C42;&#x9AD8;&#x4E8E;&#x5355;&#x76F8;(&#x5FC5;&#x987B;&#x4E25;&#x683C;&#x4E0E;I&#x76F8;&#x5DEE;90&#x5EA6;&#x7684;&#x6574;&#x6570;&#x500D;&#xFF0C;&#x5426;&#x5219;Q&#x4FE1;&#x53F7;&#x4F1A;&#x6DF7;&#x8FDB;I&#xFF0C;I&#x4E5F;&#x4F1A;&#x6DF7;&#x8FDB;Q)&#x3002;<br>
+&#x7B80;&#x5355;&#x7684;&#x8BF4;&#x5C31;&#x662F;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x8DEF;&#xFF0C;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x8F7D;&#x6CE2;&#x8C03;&#x5236;&#xFF0C;&#x4E24;&#x8DEF;&#x8F7D;&#x6CE2;&#x76F8;&#x4E92;&#x6B63;&#x4EA4;&#x3002; &#x6B63;&#x4EA4;&#x4FE1;&#x53F7;&#x5C31;&#x662F;&#x4E24;&#x8DEF;&#x9891;&#x7387;&#x76F8;&#x540C;&#xFF0C;&#x76F8;&#x4F4D;&#x76F8;&#x5DEE;90&#x5EA6;&#x7684;&#x8F7D;&#x6CE2;&#xFF0C;&#x4E00;&#x822C;&#x7528;sin&#x548C;cos&#xFF0C;&#x4E0E;I&#xFF0C;Q&#x4E24;&#x8DEF;&#x4FE1;&#x53F7;&#x5206;&#x522B;&#x8C03;&#x5236;&#x540E;&#x4E00;&#x8D77;&#x53D1;&#x5C04;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x9891;&#x8C31;&#x5229;&#x7528;&#x7387;&#x3002;</p>
+<h6 class="mume-header" id="qam">QAM</h6>
+
+<p>QAM(Quadrate Amplitude Modulation, &#x6B63;&#x4EA4;&#x5E45;&#x5EA6;&#x8C03;&#x5236;)&#xFF0C;&#x5176;&#x5E45;&#x5EA6;&#x548C;&#x76F8;&#x4F4D;&#x540C;&#x65F6;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x5C06;&#x4E24;&#x79CD;&#x8C03;&#x5E45;&#x4FE1;&#x53F7;&#x6C47;&#x5408;&#x5230;&#x4E00;&#x4E2A;&#x4FE1;&#x9053;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x53CC;&#x500D;&#x6269;&#x5C55;&#x6709;&#x6548;&#x5E26;&#x5BBD;&#x3002;&#x6B63;&#x4EA4;&#x8C03;&#x5E45;&#x88AB;&#x7528;&#x4E8E;&#x8109;&#x51B2;&#x8C03;&#x5E45;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5728;&#x65E0;&#x7EBF;&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x6709;&#x4E09;&#x4E2A;&#x7279;&#x6027;&#x968F;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#xFF1A;&#x5E45;&#x5EA6;&#x3001;&#x76F8;&#x4F4D;&#x6216;&#x9891;&#x7387;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x76F8;&#x4F4D;&#x548C;&#x9891;&#x7387;&#x4EC5;&#x4EC5;&#x662F;&#x4ECE;&#x4E0D;&#x540C;&#x7684;&#x89D2;&#x5EA6;&#x53BB;&#x89C2;&#x5BDF;&#x6216;&#x6D4B;&#x91CF;&#x540C;&#x4E00;&#x4FE1;&#x53F7;&#x7684;&#x53D8;&#x5316;&#x3002;&#x4EBA;&#x4EEC;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#x5E45;&#x5EA6;&#x548C;&#x76F8;&#x4F4D;&#x7684;&#x8C03;&#x5236;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5206;&#x5F00;&#x8FDB;&#x884C;&#x8C03;&#x5236;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x65E2;&#x96BE;&#x4E8E;&#x4EA7;&#x751F;&#x66F4;&#x96BE;&#x4E8E;&#x68C0;&#x6D4B;&#x3002;&#x4F46;&#x662F;&#x5728;&#x7279;&#x5236;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#x4FE1;&#x53F7;&#x53EF;&#x4EE5;&#x5206;&#x89E3;&#x4E3A;&#x4E00;&#x7EC4;&#x76F8;&#x5BF9;&#x72EC;&#x7ACB;&#x7684;&#x5206;&#x91CF;&#xFF1A;&#x540C;&#x76F8;&#xFF08;I&#xFF09;&#x548C;&#x6B63;&#x4EA4;&#xFF08;Q&#xFF09;&#x5206;&#x91CF;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x5206;&#x91CF;&#x662F;&#x6B63;&#x4EA4;&#x7684;&#xFF0C;&#x4E14;&#x4E92;&#x4E0D;&#x76F8;&#x5E72;&#x7684;&#x3002;</p>
+<p>&#x6B63;&#x4EA4;&#x8C03;&#x5E45;&#x4FE1;&#x53F7;&#x6709;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#x9891;&#x7387;&#x7684;&#x8F7D;&#x6CE2;&#xFF0C;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x53EB;I&#x4FE1;&#x53F7;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x53EB;Q&#x4FE1;&#x53F7;&#x3002;I&#x4FE1;&#x53F7;&#x548C;Q&#x4FE1;&#x53F7;&#x6765;&#x81EA;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x6E90;&#xFF0C;&#x5E45;&#x5EA6;&#x548C;&#x9891;&#x7387;&#x90FD;&#x76F8;&#x540C;&#xFF0C;&#x552F;&#x4E00;&#x4E0D;&#x540C;&#x7684;&#x662F;Q&#x4FE1;&#x53F7;&#x7684;&#x76F8;&#x4F4D;&#x4E0E;I&#x4FE1;&#x53F7;&#x76F8;&#x5DEE;90&#x5EA6;&#x3002;&#x4ECE;&#x6570;&#x5B66;&#x89D2;&#x5EA6;&#x5C06;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x6210;&#x6B63;&#x5F26;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x6210;&#x4F59;&#x5F26;&#x3002;&#x4E24;&#x79CD;&#x88AB;&#x8C03;&#x5236;&#x7684;&#x8F7D;&#x6CE2;&#x5728;&#x53D1;&#x5C04;&#x65F6;&#x5DF2;&#x88AB;&#x6DF7;&#x548C;&#x3002;&#x5230;&#x8FBE;&#x76EE;&#x7684;&#x5730;&#x540E;&#xFF0C;&#x8F7D;&#x6CE2;&#x88AB;&#x5206;&#x79BB;&#xFF0C;&#x6570;&#x636E;&#x88AB;&#x5206;&#x522B;&#x63D0;&#x53D6;&#x7136;&#x540E;&#x548C;&#x539F;&#x59CB;&#x8C03;&#x5236;&#x4FE1;&#x606F;&#x76F8;&#x6DF7;&#x548C;&#x3002;</p>
+<p>QAM&#x8C03;&#x5236;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;&#xFF1A;<br>
+QAM&#x8C03;&#x5236;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5E45;&#x5EA6;&#x8C03;&#x5236;&#x548C;&#x76F8;&#x4F4D;&#x8C03;&#x5236;&#x7684;&#x7EC4;&#x5408;&#x3002;&#x76F8;&#x4F4D;+&#x5E45;&#x5EA6;&#x72B6;&#x6001;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x6216;&#x6570;&#x5B57;&#x7684;&#x7EC4;&#x5408;&#x3002;QAM&#x7684;&#x4F18;&#x70B9;&#x662F;&#x5177;&#x6709;&#x66F4;&#x5927;&#x7684;&#x7B26;&#x53F7;&#x7387;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x83B7;&#x5F97;&#x66F4;&#x9AD8;&#x7684;&#x7CFB;&#x7EDF;&#x6548;&#x7387;&#x3002;&#x901A;&#x5E38;&#x7531;&#x7B26;&#x53F7;&#x7387;&#x786E;&#x5B9A;&#x5360;&#x7528;&#x5E26;&#x5BBD;&#x3002;&#x56E0;&#x6B64;&#x6BCF;&#x4E2A;&#x7B26;&#x53F7;&#x7684;&#x6BD4;&#x7279;&#xFF08;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x5355;&#x4F4D;&#xFF09;&#x8D8A;&#x591A;&#xFF0C;&#x6548;&#x7387;&#x5C31;&#x8D8A;&#x9AD8;&#x3002;&#x5BF9;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x6240;&#x9700;&#x8981;&#x7684;&#x7B26;&#x53F7;&#x6570;&#x4E3A;2^n,&#x8FD9;&#x91CC;n&#x662F;&#x6BCF;&#x4E2A;&#x7B26;&#x53F7;&#x7684;&#x6BD4;&#x7279;&#x6570;&#x3002;&#x5BF9;&#x4E8E;16QAM&#xFF0C;n=4&#xFF0C;&#x56E0;&#x6B64;&#x6709;16&#x4E2A;&#x7B26;&#x53F7;&#xFF0C;&#x6BCF;&#x4E2A;&#x7B26;&#x53F7;&#x4EE3;&#x8868;4bit&#xFF1A;0000, 0001,0010&#x7B49;&#x3002;&#x5BF9;&#x4E8E;64QAM&#xFF0C;n=6&#xFF0C;&#x56E0;&#x6B64;&#x6709;64&#x4E2A;&#x7B26;&#x53F7;&#xFF0C;&#x6BCF;&#x4E2A;&#x7B26;&#x53F7;&#x4EE3;&#x8868;6bit&#xFF1A;000000&#xFF0C;000001&#xFF0C;000010&#x7B49;&#x3002;<br>
+&#x4EE5;&#x4E0A;&#x5C31;&#x662F;QAM&#x8C03;&#x5236;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;&#x3002;&#x7ECF;&#x8FC7;&#x4FE1;&#x9053;&#x7F16;&#x7801;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x7684;MPEG-2&#x6BD4;&#x7279;&#x6D41;&#x8FDB;&#x5165;QAM&#x8C03;&#x5236;&#x5668;&#xFF0C;&#x4FE1;&#x53F7;&#x88AB;&#x5206;&#x4E3A;&#x4E24;&#x8DEF;&#xFF0C;&#x4E00;&#x8DEF;&#x7ED9;I&#xFF0C;&#x53E6;&#x4E00;&#x8DEF;&#x7ED9;Q&#xFF0C;&#x6BCF;&#x4E00;&#x8DEF;&#x4E00;&#x6B21;&#x7ED9;3&#x6BD4;&#x7279;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FD9;3&#x6BD4;&#x7279;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x4E00;&#x5171;&#x6709;8&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;8&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x7535;&#x5E73;&#x5E45;&#x5EA6;&#xFF0C;&#x8FD9;&#x6837;I&#x6709;8&#x4E2A;&#x4E0D;&#x540C;&#x5E45;&#x5EA6;&#x7684;&#x7535;&#x5E73;&#xFF0C;Q&#x6709;8&#x4E2A;&#x4E0D;&#x540C;&#x5E45;&#x5EA6;&#x7684;&#x7535;&#x5E73;&#xFF0C;&#x800C;&#x4E14;I&#x548C;Q&#x4E24;&#x8DEF;&#x4FE1;&#x53F7;&#x6B63;&#x4EA4;&#x3002;&#x8FD9;&#x6837;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;I&#x7684;&#x5E45;&#x5EA6;&#x548C;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;Q&#x7684;&#x5E45;&#x5EA6;&#x7EC4;&#x5408;&#x90FD;&#x4F1A;&#x5728;&#x6781;&#x5750;&#x6807;&#x56FE;&#x4E0A;&#x6620;&#x5C04;&#x4E00;&#x4E2A;&#x76F8;&#x5E94;&#x7684;&#x661F;&#x5EA7;&#x70B9;&#xFF0C;&#x8FD9;&#x6837;&#x6BCF;&#x4E2A;&#x661F;&#x5EA7;&#x70B9;&#x4EE3;&#x8868;&#x7531;6&#x4E2A;&#x6BD4;&#x7279;&#x7684;&#x6570;&#x636E;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#xFF0C;I&#x548C;Q&#x4E00;&#x5171;&#x6709;8&#xD7;8&#x5171;64&#x79CD;&#x7EC4;&#x5408;&#x72B6;&#x6001;&#xFF0C;&#x5404;&#x79CD;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x8FC7;&#x7684;&#x6570;&#x636E;&#x72B6;&#x6001;&#x7EC4;&#x5408;&#x6700;&#x540E;&#x6620;&#x5C04;&#x5230;&#x661F;&#x5EA7;&#x56FE;&#x4E0A;&#x4E3A;64QAM&#x661F;&#x5EA7;&#x56FE;&#x3002;</p>
+<p>&#x6B63;&#x4EA4;&#x632F;&#x5E45;&#x952E;&#x63A7;&#x662F;&#x4E00;&#x79CD;&#x5C06;&#x4E24;&#x79CD;&#x8C03;&#x5E45;&#x4FE1;&#x53F7;&#xFF08;2ASK&#x548C;2PSK&#xFF09;&#x6C47;&#x5408;&#x5230;&#x4E00;&#x4E2A;&#x4FE1;&#x9053;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x53CC;&#x500D;&#x6269;&#x5C55;&#x6709;&#x6548;&#x5E26;&#x5BBD;&#xFF0C;&#x6B63;&#x4EA4;&#x8C03;&#x5E45;&#x88AB;&#x7528;&#x4E8E;&#x8109;&#x51B2;&#x8C03;&#x5E45;&#x3002;&#x6B63;&#x4EA4;&#x8C03;&#x5E45;&#x4FE1;&#x53F7;&#x6709;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#x9891;&#x7387;&#x7684;&#x8F7D;&#x6CE2;&#xFF0C;&#x4F46;&#x662F;&#x76F8;&#x4F4D;&#x76F8;&#x5DEE;90&#x5EA6;&#xFF08;&#x56DB;&#x5206;&#x4E4B;&#x4E00;&#x5468;&#x671F;&#xFF0C;&#x6765;&#x81EA;&#x79EF;&#x5206;&#x672F;&#x8BED;&#xFF09;&#x3002;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x53EB;I&#x4FE1;&#x53F7;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x53EB;Q&#x4FE1;&#x53F7;&#x3002;&#x4ECE;&#x6570;&#x5B66;&#x89D2;&#x5EA6;&#x5C06;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x8868;&#x793A;&#x6210;&#x6B63;&#x5F26;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x6210;&#x4F59;&#x5F26;&#x3002;&#x4E24;&#x79CD;&#x88AB;&#x8C03;&#x5236;&#x7684;&#x8F7D;&#x6CE2;&#x5728;&#x53D1;&#x5C04;&#x65F6;&#x5DF2;&#x88AB;&#x6DF7;&#x548C;&#x3002;&#x5230;&#x8FBE;&#x76EE;&#x7684;&#x5730;&#x540E;&#xFF0C;&#x8F7D;&#x6CE2;&#x88AB;&#x5206;&#x79BB;&#xFF0C;&#x6570;&#x636E;&#x88AB;&#x5206;&#x522B;&#x63D0;&#x53D6;&#x7136;&#x540E;&#x548C;&#x539F;&#x59CB;&#x8C03;&#x5236;&#x4FE1;&#x606F;&#x76F8;&#x6DF7;&#x548C;&#x3002;<br>
+- 4QAM   &#x4E8C;&#x8FDB;&#x5236;QAM<br>
+- 16QAM  &#x56DB;&#x8FDB;&#x5236;QAM<br>
+- 32QAM  &#x516D;&#x8FDB;&#x5236;QAM<br>
+- 64QAM  &#x516B;&#x8FDB;&#x5236;QAM (&#x5E94;&#x7528;&#x4E8E;DVB-C)<br>
+- QAM_128<br>
+- QAM_256<br>
+- Auto QAM</p>
+<ul>
+<li>VSB
+<ul>
+<li>4VSB</li>
+<li>8VSB (&#x5E94;&#x7528;&#x4E8E;ATSC)<br>
+8VSB&#x662F;8&#x7EA7;&#x6B8B;&#x7559;&#x8FB9;&#x5E26;&#x8C03;&#x5236;&#x3002; &#x672C;&#x8D28;&#x4E0A;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;&#x5C06;&#x6B63;&#x5F26;&#x8F7D;&#x6CE2;&#x5E45;&#x5EA6;&#x79FB;&#x4F4D;&#x5230;&#x516B;&#x4E2A;&#x7535;&#x5E73;&#x4E4B;&#x4E00;&#x6765;&#x5C06;&#x4E8C;&#x8FDB;&#x5236;&#x6D41;&#x8F6C;&#x6362;&#x4E3A;&#x516B;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x3002; 8VSB&#x80FD;&#x591F;&#x4F20;&#x8F93;&#x6BCF;&#x4E2A;&#x7B26;&#x53F7;&#x4E09;&#x4F4D;(2^3=8); &#x5728;ATSC&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x7B26;&#x53F7;&#x5305;&#x62EC;&#x6765;&#x81EA;MPEG&#x4F20;&#x8F93;&#x6D41;&#x7684;&#x4E24;&#x4E2A;&#x6BD4;&#x7279;&#xFF0C;&#x5B83;&#x4EEC;&#x88AB;&#x7F51;&#x683C;&#x8C03;&#x5236;&#x4EE5;&#x4EA7;&#x751F;&#x4E09;&#x6BD4;&#x7279;&#x7684;&#x6570;&#x5B57;&#x3002;</li>
+<li>16VSB</li>
+</ul>
+</li>
+<li>QPSK (DVB-S)</li>
+<li>BPSK</li>
+<li>8PSK</li>
+<li>DPSK</li>
+<li>2DPSK</li>
+<li>16APSK</li>
+<li>32APSK</li>
+<li>NBC_QPSK</li>
+<li>NBC_8PSK</li>
+<li>COFDM (DVB-T)</li>
+</ul>
+<p>ATSC:</p>
+<ul>
+<li>ATSC-T: 8VSB (VSB)</li>
+<li>ATSC-C: 16VSB (VSB, &#x4E8B;&#x5B9E;&#x6807;&#x51C6;&#x662F;256QAM)</li>
+<li>ATSC-S: QPSK/8PSK (PSK)</li>
+</ul>
+<p>DVB:</p>
+<ul>
+<li>DVB-T: COFDM (OFDM: QPSK, 16QAM, 64QAM)</li>
+<li>DVB-T2: COFDM (OFDM: QPSK, 16QAM, 64QAM, 256QAM)</li>
+<li>DVB-C: 64QAM (QAM: 32QAM, 64QAM, 128QAM, 256QAM)</li>
+<li>DBV-S: QPSK (PSK)</li>
+</ul>
+<p>DTMB:<br>
+DTMB&#x53EA;&#x9488;&#x5BF9;&#x5730;&#x9762;&#x4F20;&#x8F93;&#xFF0C;&#x6709;&#x7EBF;&#x6570;&#x5B57;&#x7535;&#x89C6;&#x6807;&#x51C6;&#x662F;DVB-C&#x3002;</p>
+<ul>
+<li>DTMB: TDS-OFDM (OFDM: 4QAM/QPSK, 4QAM-NR, 16QAM, 32QAM, 64QAM)</li>
+</ul>
+<p>ISDB:</p>
+<ul>
+<li>ISDB-T: BST-OFDM (OFDM: DQPSK, QPSK, 16QAM, 64QAM)</li>
+<li>ISDB-C: 64QAM (QAM)</li>
+<li>ISDB-S: TC8PSK (PSK)</li>
+</ul>
+<h4 class="mume-header" id="fec">FEC</h4>
+
+<p>&#x524D;&#x5411;&#x7EA0;&#x9519;&#x4E5F;&#x53EB;&#x524D;&#x5411;&#x7EA0;&#x9519;&#x7801;&#x3002;&#x524D;&#x5411;&#x7EA0;&#x9519;&#x662F;&#x4E00;&#x79CD;&#x5DEE;&#x9519;&#x63A7;&#x5236;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x662F;&#x6307;&#x4FE1;&#x53F7;&#x5728;&#x88AB;&#x9001;&#x5165;&#x4F20;&#x8F93;&#x4FE1;&#x9053;&#x4E4B;&#x524D;&#x9884;&#x5148;&#x6309;&#x4E00;&#x5B9A;&#x7684;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x5904;&#x7406;&#xFF0C;&#x52A0;&#x5165;&#x5E26;&#x6709;&#x4FE1;&#x53F7;&#x672C;&#x8EAB;&#x7279;&#x5F81;&#x7684;&#x5197;&#x7801;&#xFF0C;&#x5728;&#x63A5;&#x6536;&#x7AEF;&#x6309;&#x7167;&#x76F8;&#x5E94;&#x7B97;&#x6CD5;&#x5BF9;&#x63A5;&#x6536;&#x5230;&#x7684;&#x4FE1;&#x53F7;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#xFF0C;&#x4ECE;&#x800C;&#x627E;&#x51FA;&#x5728;&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#x9519;&#x8BEF;&#x7801;&#x5E76;&#x5C06;&#x5176;&#x7EA0;&#x6B63;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+<h4 class="mume-header" id="agc">AGC</h4>
+
+<h4 class="mume-header" id="atv">ATV</h4>
+
+<h4 class="mume-header" id="drx-ip_drxx%E7%B3%BB%E5%88%97">DRX (IP_DRXX)&#x7CFB;&#x5217;</h4>
+
+<h5 class="mume-header" id="drx-a">DRX-A</h5>
+
+<ul>
+<li>Global Analog</li>
+</ul>
+<h5 class="mume-header" id="drxd">DRXD</h5>
+
+<ul>
+<li>DVB-T</li>
+</ul>
+<h5 class="mume-header" id="drx-h">DRX-H</h5>
+
+<ul>
+<li>ATSC</li>
+<li>NTSC / BTSC</li>
+<li>J.83 B</li>
+</ul>
+<h5 class="mume-header" id="drx-l">DRX-L</h5>
+
+<ul>
+<li>ATSC</li>
+<li>J.83 B</li>
+</ul>
+<h5 class="mume-header" id="drx-j">DRX-J</h5>
+
+<ul>
+<li>DVB-C</li>
+<li>ATSC</li>
+<li>NTSC / BTSC</li>
+<li>PAL/SECAM</li>
+<li>J.83 B</li>
+</ul>
+<h5 class="mume-header" id="drx-j2">DRX-J2</h5>
+
+<h5 class="mume-header" id="drx-k">DRX-K</h5>
+
+<ul>
+<li>DVB-C/DVB-T</li>
+<li>PAL/SECAM</li>
+<li>Analog/Audio</li>
+</ul>
+<h5 class="mume-header" id="drx-n">DRX-N</h5>
+
+<ul>
+<li>ISDB-T</li>
+<li>NTSC</li>
+<li>J.83 B</li>
+</ul>
+<h5 class="mume-header" id="drx-t2">DRX-T2</h5>
+
+<ul>
+<li>DVB-T2</li>
+</ul>
+<h5 class="mume-header" id="drx-y">DRX-Y</h5>
+
+<ul>
+<li>DVB-C (QAM IP taken from DRX-J)</li>
+</ul>
+<h5 class="mume-header" id="drx-z">DRX-Z</h5>
+
+<ul>
+<li>DMB-T/ADTB-T/LDPC</li>
+<li>CDMB-T</li>
+<li>Cable</li>
+<li>Analog/Audio</li>
+</ul>
+<h5 class="mume-header" id="drx-asx">DRX-ASX</h5>
+
+<ul>
+<li>DVB-T/ASTC</li>
+<li>NTSC/PAL/SECAM</li>
+</ul>
+<h5 class="mume-header" id="drx-fsn">DRX-FSN</h5>
+
+<ul>
+<li>DVB-T/ASTC/DVB-T2/ISDB-T</li>
+<li>NTSC/PAL/SECAM</li>
+</ul>
+<blockquote>
+<p>DRX-FSN = DRX-ASX + ISDB-T + DVB-T2</p>
+</blockquote>
+<h3 class="mume-header" id="tunerdemod%E9%A9%B1%E5%8A%A8">Tuner&amp;Demod&#x9A71;&#x52A8;</h3>
+
+<p>VSilicon&#x7684;Tuner&#x548C;Demod&#x9A71;&#x52A8;&#x662F;&#x96C6;&#x6210;&#x5728;&#x4E00;&#x8D77;&#x7684;&#xFF0C;&#x4F4D;&#x4E8E;<code>DCP_SYS/Application/User_Driver/Tuner</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x5305;&#x542B;&#x5404;&#x79CD;Tuner&amp;Demod&#x7684;&#x9A71;&#x52A8;&#xFF0C;SX6/SX7/SX8&#x4F7F;&#x7528;&#x7684;&#x662F;DRX_SX6&#x7684;Demodulator(&#x96C6;&#x6210;&#x4E8E;SOC&#x5185;)&#xFF0C;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x6570;&#x79CD;Tuner&#xFF0C;&#x53EF;&#x4EE5;&#x5728;<code>Inc/RF</code>&#x6216;<code>Src/RF</code>&#x4E0B;&#x770B;&#x5230;&#x53EF;&#x652F;&#x6301;&#x7684;Tuner&#x79CD;&#x7C7B;&#xFF0C;&#x76EE;&#x524D;SX7/Union&#x4F7F;&#x7528;&#x7684;&#x662F;MxL601&#x3002;</p>
+<p>&#x9A71;&#x52A8;&#x5C42;&#x5BF9;&#x4E0A;&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x4E00;&#x4E2A;TunerDriver_t&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x8BE5;&#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;&#x4F4D;&#x4E8E;<code>DCP_SYS/Application/Inc/TunerDriverDefs.h</code>&#x5185;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="C" class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> _tagTunerDriver <span class="token punctuation">{</span>
+    <span class="token function">RETURN_TYPE</span> <span class="token punctuation">(</span><span class="token operator">*</span>Init<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token operator">*</span> Param<span class="token punctuation">)</span><span class="token punctuation">;</span>                                           <span class="token comment">/**&lt;init */</span>
+    <span class="token function">RETURN_TYPE</span> <span class="token punctuation">(</span><span class="token operator">*</span>DeInit<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token operator">*</span> Param<span class="token punctuation">)</span><span class="token punctuation">;</span>                                         <span class="token comment">/**&lt;Deinit */</span>
+    <span class="token function">RETURN_TYPE</span> <span class="token punctuation">(</span><span class="token operator">*</span>SetAttr<span class="token punctuation">)</span><span class="token punctuation">(</span>trid_uint8 TunerID<span class="token punctuation">,</span> trid_uint32 CmdID<span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token operator">*</span> pInfo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/**&lt;set attribute */</span>
+    <span class="token function">RETURN_TYPE</span> <span class="token punctuation">(</span><span class="token operator">*</span>GetAttr<span class="token punctuation">)</span><span class="token punctuation">(</span>trid_uint8 TunerID<span class="token punctuation">,</span> trid_uint32 CmdID<span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token operator">*</span> pInfo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/**&lt;get atribute */</span>
+    trid_uint32 PowerState<span class="token punctuation">;</span>                                                     <span class="token comment">/**&lt;power state */</span>
+<span class="token punctuation">}</span> TunerDriver_t<span class="token punctuation">;</span>
+</pre><p>&#x9A71;&#x52A8;&#x7F16;&#x8BD1;&#x6210;so&#x7684;&#x5F62;&#x5F0F;&#x4F9B;PlfApp&#x8C03;&#x7528;&#xFF0C;&#x4EE3;&#x7801;&#x4F4D;&#x4E8E;<code>DCP_SYS/Application/Project/Decouple_Comm/PlfApp/tplfglue/fe</code>&#x5185;&#xFF0C; &#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x6587;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>tplf_fe_fl_atsc.c</li>
+<li>tplf_fe_fl_dvb.c</li>
+<li>tplf_fe_fl_arib.c</li>
+<li>tplf_fe_fl_sbtvd.c<br>
+&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x5236;&#x5F0F;&#x7684;Tuner&amp;Demod, &#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x901A;&#x8FC7;dlopen&#x6253;&#x5F00;&#x9A71;&#x52A8;&#x7684;so&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7;TunerDriver_t&#x8C03;&#x7528;&#x5230;driver&#x7A0B;&#x5E8F;&#x3002;</li>
+</ul>
+<p>&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x65F6;&#x901A;&#x8FC7;xml&#x6587;&#x4EF6;&#x9009;&#x62E9;Tuner&amp;Demod&#xFF0C;&#x5DF2;SX7/SX8&#x4E3A;&#x4F8B;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E3A;<code>/system/misc/atsc_system.xml</code>&#xFF0C;&#x5173;&#x4E8E;Tuner&#x7684;&#x90E8;&#x5206;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DemodType</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>9<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>   <span class="token comment">&lt;!-- 6:SXL; 7:Fusion;9:SX6; 99:TS; 100:DRX_39xyJ2; 101:S5H1409; 102:S5H1411; 103:TDM5550_ATSC; --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RFType</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>      <span class="token comment">&lt;!-- 0: NULL, 8: means _RF_Nutune_FK160X_, 117:TA231x --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RFI2cAddr</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0xC0<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span> <span class="token comment">&lt;!-- RFType = _RF_NuTune_TH2603_,RFI2CAddr = 0xC0;RFType = _RF_TA231x_, RFI2CAddr = 0xC2; --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SerialTS</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>            <span class="token comment">&lt;!-- 0 means Parallel, 1 means Serial --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TSInput</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>     <span class="token comment">&lt;!-- 0:Serial_TS, 1: Serial_Demod , 2: Serial_TS1, 3: Parallel_Demod , 4:Parallel_TS1, 5:Parallel_TS2  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CIPath</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>      <span class="token comment">&lt;!-- 0:CI_ByPass, 1:CI_Out_TS1, 2:CI_Out_TS2 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ClockReverse</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>        <span class="token comment">&lt;!-- 0:falling clock edge trigger, 1:raising clock edge trigger --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SupportAFC</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>  <span class="token comment">&lt;!-- 0 means not support,1 means support --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CableTryTime</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>15<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>       <span class="token comment">&lt;!-- 50ms for each time --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AirTryTime</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>10<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span> <span class="token comment">&lt;!-- 50ms for each time --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AnalogTryTime</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>5<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>       <span class="token comment">&lt;!-- 50ms for each time --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DisableAtvAVCheck</span> <span class="token attr-name">Val</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span> <span class="token comment">&lt;!-- whether Atv AV check in DRX lib, 0:check; 1:not check --&gt;</span>
+</pre><p>&#x5176;&#x4E2D;RFType&#x548C;DemodType&#x7528;&#x4E8E;&#x9009;&#x62E9;Tuner&#x548C;Demod&#x7684;&#x578B;&#x53F7;&#xFF0C;&#x5B9A;&#x4E49;&#x4F4D;&#x4E8E;<code>DCP_SYS/Application/Inc/TunerDriverDefs.h</code>&#x5185;&#x7684;<code>RFType_e</code>&#x548C;<code>DemodType_e</code>&#x7684;enum&#x5B9A;&#x4E49;&#x3002;</p>
+<ul>
+<li>
+<p><strong>EWBS</strong><br>
+Emergency Warning Broadcast System&#xFF0C; &#x7D27;&#x6025;&#x8B66;&#x62A5;&#x5E7F;&#x64AD;&#x7CFB;&#x7EDF;&#xFF0C; ISDB-T&#x5F15;&#x5165;&#xFF0C;&#x4FE1;&#x606F;&#x901A;&#x8FC7;TMCC/PMT&#x8868;&#x8BC6;&#x522B;&#x3002;</p>
+</li>
+<li>
+<p><strong>STC</strong></p>
+</li>
+<li>
+<p><strong>SUPER_IMPOSE</strong></p>
+</li>
+<li></li>
+</ul>
+<p>sub<br>
+ttx<br>
+adapt</p>
+<p>ad<br>
+ISDB_CAPTION<br>
+stereo<br>
+scramble<br>
+preselection</p>
+<h2 class="mume-header" id="stack">Stack</h2>
+
+<p>VHF Low (VL, Very Low Frequency) 47MHz-159MHz<br>
+VHF High (VH, Very High Frequency) 162MHZ-666MHz<br>
+UHF (U, Ultra High Frequency) 448MHz - 861MHz</p>
+<p>&#x7B26;&#x53F7;&#x7387;D=W(1+a)=8/(1+0.16)=6.8966Ms/s<br>
+a&#x4F4E;&#x901A;&#x6EE4;&#x6CE2;&#x6EDA;&#x52A8;&#x7CFB;&#x6570; &#x4E00;&#x822C;&#x4E3A;0.16<br>
+W&#x4FE1;&#x9053;&#x5E26;&#x5BBD; &#x4E00;&#x822C;&#x4E3A;8MHz</p>
+<p>64QAM &#x603B;&#x4F20;&#x8F93;&#x901F;&#x7387;S=D<em>N=6.8966</em>6=41.379Mbps<br>
+N&#x9891;&#x5E26;&#x5229;&#x7528;&#x7387;log2(QAM) 16QAM 32QAM 64QAM 128QAM 256QAM &#x5BF9;&#x5E94;4 5 6 7 8</p>
+<p>64QAM&#xA0;&#x6709;&#x6548;&#x4F20;&#x8F93;&#x901F;&#x7387; SS=S*188/204=38.134Mbps<br>
+188/204&#x662F;DVB-C&#x6240;&#x4F7F;&#x7528;&#x7684;&#x91CC;&#x5FB7;-&#x6240;&#x7F57;&#x95E8;&#x7F16;&#x7801;RS(204,188)&#x7684;&#x7F16;&#x7801;&#x6548;&#x7387;<br>
+&#x4E5F;&#x5C31;&#x662F;188&#x5B57;&#x8282;&#x540E;&#x9644;&#x52A0;16&#x5B57;&#x8282;RS&#x7801;&#xFF0C;&#x6784;&#x6210;(204&#xFF0C;188)RS&#x7801;&#xFF0C;&#x8FD9;&#x4E5F;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;&#x5916;&#x7F16;&#x7801;.</p>
+<p>&#x7B26;&#x53F7;&#x7387;&#xFF08;SR&#xFF09;&#x548C;&#x4F20;&#x8F93;&#x5E26;&#x5BBD;&#xFF08;BW&#xFF09;&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;BW=SR&#xFF08;1+ &#x3B1;&#xFF09;</p>
+<p>FPA:<br>
+frame packing arrangement &#x7F16;&#x89E3;&#x7801;</p>
+<p>BD Wise:<br>
+Blue-ray Disc Wise</p>
+<h2 class="mume-header" id="atv-1">ATV</h2>
+
+<ul>
+<li>WSS<br>
+Wide Screen Signalling&#xFF0C;&#x5BBD;&#x5C4F;&#x4FE1;&#x53F7;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x4F20;&#x9012;&#x4FE1;&#x53F7;&#x4E2D;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x7387;&#x3001;&#x7535;&#x5F71;&#x6A21;&#x5F0F;&#x3001;&#x8FD0;&#x52A8;&#x9002;&#x5E94;&#x3001;&#x5B57;&#x5E55;&#x548C;&#x73AF;&#x7ED5;&#x58F0;&#x7B49;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3002;<br>
+WSS&#x5305;&#x542B;14bit&#x6570;&#x636E;&#x4FE1;&#x53F7;&#x5B58;&#x5728;&#x4E8E;&#x573A;&#x9006;&#x7A0B;&#x7B2C;23&#x884C;&#x4E2D;&#x3002;<br>
+&#x76EE;&#x524D;&#x83B7;&#x5F97;WSS&#x4FE1;&#x606F;&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x4E8E;CVBS&#x901A;&#x9053;&#x81EA;&#x52A8;&#x83B7;&#x5F97;&#x7F29;&#x653E;&#x6BD4;&#x7387;&#x7684;&#x4FE1;&#x606F; &#x3002;</li>
+</ul>
+<h2 class="mume-header" id="cc-closed-caption">CC (Closed Caption)</h2>
+
+<p>Closed Caption&#x5B9A;&#x4E49;&#x4E86;4&#x4E2A;channel&#x53CA;Caption&#x3001;Text&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x603B;&#x5171;&#x6709;8&#x79CD;&#x5F62;&#x5F0F;&#x6574;&#x7406;&#x5982;&#x4E0B;&#x8868;&#xFF1A;</p>
+<p>channel | Field | First</p>
+<p>&#x5F53;&#x4F20;&#x9001;&#x7279;&#x5B9A;&#x4FE1;&#x9053;&#x7684;Closed Caption&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x652F;&#x6301;Closed Caption&#x7684;&#x7535;&#x89C6;&#x4EA6;&#x987B;&#x9009;&#x62E9;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x901A;&#x9053;&#xFF0C;&#x624D;&#x80FD;&#x6B63;&#x786E;&#x89E3;&#x51FA;&#x5B57;&#x5E55;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 class="mume-header" id="audio">Audio</h2>
+
+<h2 class="mume-header" id="video">Video</h2>
+
+<p>Captioning not related to video content is called<br>
+&#x201C;superimpose&#x201D;</p>
+<p>TDM&#x3001;FDM &#x6216;LDM<br>
+FDM&#x4E0E;TDM&#x90FD;&#x5C5E;&#x4E8E;&#x6570;&#x636E;&#x901A;&#x4FE1;&#x4E2D;&#x7684;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6280;&#x672F;&#x3002;<br>
+FDM&#xFF08;&#x9891;&#x5206;&#x590D;&#x7528;Frequency Division Multiplexing)&#x662F;&#x5C06;&#x6574;&#x4E2A;&#x4F20;&#x8F93;&#x9891;&#x5E26;&#x5212;&#x5206;&#x4E3A;&#x82E5;&#x5E72;&#x4E2A;&#x9891;&#x7387;&#x901A;&#x9053;&#xFF0C;&#x6BCF;&#x4E2A;&#x7528; &#x6237;&#x5360;&#x7528;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x3002;&#x9891;&#x7387;&#x901A;&#x9053;&#x4E4B;&#x95F4;&#x7559;&#x6709;&#x9632;&#x62A4;&#x9891;&#x5E26;&#xFF1B;<br>
+TDM&#xFF08;&#x65F6;&#x5206;&#x590D;&#x7528;Time Division Multiplexing&#xFF09;&#x662F;&#x5C06;&#x65F6;&#x95F4;&#x5206;&#x5272;&#x6210;&#x5C0F;&#x7684;&#x65F6;&#x95F4;&#x7247;&#xFF0C;&#x6BCF;&#x4E2A;&#x65F6;&#x95F4;&#x7247;&#x53C8;&#x5206;&#x4E3A;&#x82E5;&#x5E72;&#x4E2A;&#x901A;&#x9053;(&#x65F6;&#x9699;&#xFF09;&#xFF0C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x5360;&#x7528;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x3002;<br>
+TDM&#x4E0E;FDM&#x5BF9;&#x6BD4;&#x5206;&#x6790;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;TDM&#x9002;&#x7528;&#x4E8E;&#x6570;&#x5B57;&#x4FE1;&#x53F7;&#x4F20;&#x8F93;&#xFF0C;FDM&#x9002;&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x4FE1;&#x53F7;&#x4F20;&#x8F93;&#xFF0C;&#x800C;&#x76EE;&#x524D;&#x7684;&#x901A;&#x4FE1;&#x6280;&#x672F;&#x4E2D;&#x7EDD;&#x5012;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x4F7F;&#x7528;&#x6570;&#x5B57;&#x901A;&#x4FE1;&#xFF0C;&#x56E0;&#x6B64;&#x5C31;&#x4F53;&#x73B0;&#x51FA;&#x4E86;TDM&#x7684;&#x4F18;&#x52BF;&#x3002;<br>
+&#x5F53;&#x7136;&#x4F20;&#x7EDF;&#x7684;TDM&#x6280;&#x672F;&#x4E5F;&#x6709;&#x5176;&#x5C40;&#x9650;&#x6027;&#xFF0C;&#x5C31;&#x662F;&#x5F53;&#x67D0;&#x7528;&#x6237;&#x65E0;&#x6570;&#x636E;&#x53D1;&#x9001;&#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x4ECD;&#x7136;&#x4E0D;&#x80FD;&#x5360;&#x7528;&#x8BE5;&#x901A;&#x9053;&#xFF0C;&#x56E0;&#x6B64;&#x9020;&#x6210;&#x4E86;&#x8D44;&#x6E90;&#x7684;&#x6D6A;&#x8D39;&#xFF0C;&#x6545;&#x800C;&#x5B9E;&#x9645;&#x4E0A;&#x73B0;&#x5728;&#x5DF2;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4E86;&#x6539;&#x8FDB;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x65F6;&#x5206;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6280;&#x672F;&#xFF08;STDM)&#x6765;&#x5F25;&#x8865;&#x6B64;&#x4E0D;&#x8DB3;&#x3002;</p>
+<p>layered division multiplexing&#xFF0C;&#x5C42;&#x5206;&#x590D;&#x7528;&#x6280;&#x672F;</p>
+<p>TEMI:<br>
+Timeline and External Media Information</p>
+<p>Captions &amp; Subtitles<br>
+TeleText</p>
+<p>&#x5948;&#x594E;&#x65AF;&#x7279;&#x6EE4;&#x6CE2;&#x5668;<br>
+&#x65C1;&#x74E3;</p>
+<p>VSB:<br>
+&#x6B8B;&#x7559;&#x8FB9;&#x5E26;&#x8C03;&#x5236;&#xFF08;VSB&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x5C1D;&#x8BD5;&#x6D88;&#x9664;&#x8109;&#x51B2;&#x5E45;&#x5EA6;&#x8C03;&#x5236;&#xFF08;PAM&#xFF09;&#x4FE1;&#x53F7;&#x7684;&#x9891;&#x8C31;&#x5197;&#x4F59;&#x7684;&#x8C03;&#x5236;&#x65B9;&#x6CD5;&#x3002; &#x901A;&#x8FC7;&#x5B9E;&#x503C;&#x6570;&#x636E;&#x5E8F;&#x5217;&#x8C03;&#x5236;&#x8F7D;&#x6CE2;&#x5BFC;&#x81F4;&#x548C;&#x9891;&#x548C;&#x5DEE;&#x9891;&#xFF0C;&#x4ECE;&#x800C;&#x4EA7;&#x751F;&#x4E24;&#x4E2A;&#x5BF9;&#x79F0;&#x7684;&#x8F7D;&#x6CE2;&#x8FB9;&#x5E26;&#x3002; &#x5BF9;&#x79F0;&#x6027;&#x610F;&#x5473;&#x7740;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x8FB9;&#x5E26;&#x662F;&#x5197;&#x4F59;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x8FB9;&#x5E26;&#x4ECD;&#x7136;&#x5141;&#x8BB8;&#x89E3;&#x8C03;&#x3002; &#x7531;&#x4E8E;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x96F6;&#x8F6C;&#x6362;&#x5E26;&#x5BBD;&#x7684;&#x6EE4;&#x6CE2;&#x5668;&#xFF0C;&#x6240;&#x5B9E;&#x65BD;&#x7684;&#x6EE4;&#x6CE2;&#x7559;&#x4E0B;&#x4E86;&#x5197;&#x4F59;&#x8FB9;&#x5E26;&#x7684;&#x75D5;&#x8FF9;&#xFF0C;&#x56E0;&#x6B64;&#x79F0;&#x4E3A;&#x201C;VSB&#x201D; &#x3002;</p>
+<p>8VSB:<br>
+&#x541E;&#x5410;&#x91CF;:</p>
+<p>&#x5728;&#x7528;&#x4E8E;&#x5E7F;&#x64AD;ATSC&#x7684;6MHz&#xFF08;&#x5146;&#x8D6B;&#x5179;&#xFF09;&#x4FE1;&#x9053;&#x4E2D;&#xFF0C;8VSB&#x643A;&#x5E26;10.76((6-0.31)*2, &#x6709;&#x6548;&#x8F7D;&#x8377;&#xFF1A;5.38)&#x5146;&#x5B57;&#x8282;&#x7684;&#x7B26;&#x53F7;&#x7387;&#xFF0C;32Mbit/s&#x7684;&#x603B;&#x6BD4;&#x7279;&#x7387;&#xFF0C;&#x4EE5;&#x53CA;19.39Mbit/s&#x7684;&#x53EF;&#x7528;&#x6570;&#x636E;&#x7684;&#x51C0;&#x6BD4;&#x7279;&#x7387;&#x3002; &#x7531;&#x4E8E;&#x6DFB;&#x52A0;&#x4E86;&#x524D;&#x5411;&#x7EA0;&#x9519;&#x7801;&#xFF0C;&#x51C0;&#x6BD4;&#x7279;&#x7387;&#x8F83;&#x4F4E;&#x3002; &#x4F7F;&#x7528;&#x7F51;&#x683C;&#x7F16;&#x7801;&#x5668;&#x9009;&#x62E9;&#x516B;&#x4E2A;&#x4FE1;&#x53F7;&#x7535;&#x5E73;&#x3002; &#x8FD8;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x8C03;&#x5236;2VSB&#xFF0C;4VSB&#x548C;16VSB&#x3002; 16VSB&#x7279;&#x522B;&#x7528;&#x4E8E;ATSC&#x6570;&#x5B57;&#x7535;&#x7F06;&#xFF0C;&#x4F46;&#x6B63;&#x4EA4;&#x5E45;&#x5EA6;&#x8C03;&#x5236;&#xFF08;QAM&#xFF09;&#x5DF2;&#x6210;&#x4E3A;&#x4E8B;&#x5B9E;&#x4E0A;&#x7684;&#x884C;&#x4E1A;&#x6807;&#x51C6;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4FBF;&#x5B9C;&#x4E14;&#x968F;&#x65F6;&#x53EF;&#x7528;&#x3002;</p>
+<ul>
+<li>atv mts<br>
+Multi-Channel Television Sound</li>
+</ul>
+<p>atv sif<br>
+atv spdif<br>
+-tuner property delivery system</p>
+<ul>
+<li>PLP<br>
+Physical Layer Pipe</li>
+</ul>
+<p>satcr<br>
+sat-positioner<br>
+AMPLITUDE</p>
+<ul>
+<li>
+<p>DiSEqC<br>
+Digital Satellite Equipment Control, &#x6570;&#x5B57;&#x536B;&#x661F;&#x8BBE;&#x5907;&#x63A7;&#x5236;</p>
+</li>
+<li>
+<p>TMCC<br>
+Transmission &amp; Multiplexing Configuration Control&#xFF0C;&#x4F20;&#x8F93;&#x548C;&#x590D;&#x7528;&#x914D;&#x7F6E;&#x63A7;&#x5236;<br>
+TMCC&#x5C31;&#x662F;&#x4F20;&#x8F93;&#x590D;&#x7528;&#x914D;&#x7F6E;&#x63A7;&#x5236;&#x4FE1;&#x53F7;&#x3002;TMCC&#x4FE1;&#x53F7;&#x544A;&#x8BC9;&#x63A5;&#x6536;&#x7EC8;&#x7AEF;&#x5982;&#x4F55;&#x89E3;&#x91CA;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#x3002;&#x5B83;&#x5305;&#x62EC;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x65B9;&#x9762;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+</li>
+</ul>
+<p>CAM</p>
+<ul>
+<li>PLP</li>
+</ul>
+<p>OFDM&#x662F;&#x591A;&#x8F7D;&#x6CE2;&#x8C03;&#x5236;&#x65B9;&#x5F0F;&#xFF0C;&#x800C;QAM&#x662F;&#x5355;&#x8F7D;&#x6CE2;&#x8C03;&#x5236;&#x65B9;&#x5F0F;</p>
+<p>IQM: IQ&#x8C03;&#x5236;&#x901A;&#x5E38;&#x628A;&#x539F;&#x4FE1;&#x53F7;&#x5206;&#x4E3A;&#x4E24;&#x8DEF;&#x6B63;&#x4EA4;&#x4FE1;&#x53F7;&#x5373;i&#x8DEF;&#x548C;q&#x8DEF;&#x3002;&#x5E76;&#x5BF9;&#x5176;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x8F7D;&#x6CE2;&#x8C03;&#x5236;&#xFF0C;&#x5E76;&#x4E14;&#x4E24;&#x8DEF;&#x8F7D;&#x6CE2;&#x4E92;&#x76F8;&#x6B63;&#x4EA4;&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
